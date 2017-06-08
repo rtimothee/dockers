@@ -1,0 +1,14 @@
+mongo:
+  image: mongo:latest
+  ports:
+    - "27017:27017"
+
+php:
+  build: .
+  ports:
+      - "8080:80"
+  volumes:
+      - "./../../../www:/var/www/html"
+      - "./php.ini:/usr/local/etc/php/conf.d/custom.ini:ro"
+  links:
+    - mongo:mongo

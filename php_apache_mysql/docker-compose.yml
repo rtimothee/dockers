@@ -6,7 +6,7 @@ mysql:
     - "MYSQL_ROOT_PASSWORD=root"
 
 php:
-  image: php:7.1-apache
+  image: php:7.0-apache
   ports:
       - "8080:80"
   volumes:

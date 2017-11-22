@@ -1,0 +1,9 @@
+version: '2'
+services:
+  test:
+    build: .
+    ports:
+        - "8080:80"
+    volumes:
+        - "./:/var/www/html/"
+        - "./php.ini:/usr/local/etc/php/conf.d/custom.ini:ro"
